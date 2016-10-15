@@ -1,14 +1,14 @@
 # carmina
 
-A Clojure library designed to ... well, that part is up to you.
+Carmina is a Clojure library which facilitates algorithmic musical composition.
 
 ## Usage
 
-FIXME
+Still under development. Stay tuned.
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 Carl Colglazier
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License 1.0.
+
