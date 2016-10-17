@@ -1,6 +1,7 @@
 (ns carmina.core
    (:require [clojure.math.numeric-tower :as math]))
 
+;; 1/f noise
 (defn roll-change [number die-count]
   "We want to reroll the die each time that the bit the die represents flips.
    To do this, check if the iterated value divided by 2 times the position
@@ -38,3 +39,15 @@
     (for [i (range 0 len)]
       (reduce + (into [] ((nth n i) :die))))))
 
+;; stochastic
+(defn triangular-min [max-num]
+  "Triangular distrubution biased toward zero"
+  (min (rand-int max-num) (rand-int max-num)))
+
+(defn triangular-max [max-num]
+  "Triangular distrubution biased toward the maximum"
+  (max (rand-int max-num) (rand-int max-num)))
+
+(defn triangular [max-num]
+  "Triangular distrubution biased toward the mean"
+  (quot (+ (rand-int max-num) (rand-int max-num)) 2))

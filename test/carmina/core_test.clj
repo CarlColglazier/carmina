@@ -22,5 +22,15 @@
     (is (= 8 (count (one-f-noise 3 6))))
     (is (= 4 (count (one-f-noise 2 6))))
     ))
-(run-tests 'carmina.core-test)
+
+(deftest triangular-test
+  (testing ""
+    (for [i (range 0 100)
+          :let [max-num 12]]
+      (do
+          (is (< 12 (triangular max-num)))
+        (is (< 12 (triangular-min max-num)))
+        (is (< 12 (triangular-max max-num))))
+      )))
+
 
